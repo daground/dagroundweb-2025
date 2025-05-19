@@ -1,0 +1,730 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DA Ground Inc.</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <!-- 로고 (크기 및 위치 조정됨) -->
+      <a href="#home">
+        <img src="src/company_logo.png" alt="DA Ground Logo" />
+      </a>
+      <ul>
+        <li>
+          <a href="#home" data-i18n="nav_home">홈</a>
+        </li>
+        <li>
+          <a href="#services" data-i18n="nav_services">사업 영역</a>
+        </li>
+        <li>
+          <a href="#team" data-i18n="nav_team">팀 소개</a>
+        </li>
+        <li>
+          <a href="#investors" data-i18n="nav_investors">투자사</a>
+        </li>
+        <li>
+          <button id="lang-toggle-btn" onclick="toggleLanguage()">EN</button>
+        </li>
+      </ul>
+    </nav>
+    <header id="home">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: -1;
+        "
+      >
+        <source src="src/test2.mp4" type="video/mp4" />
+      </video>
+
+      <h1 data-i18n="header_title">
+        Web3 기반 디지털 전환,<br />
+        수많은 기회의 출발점을 함께합니다.
+      </h1>
+      <p data-i18n="header_subtitle">
+        디에이그라운드는 기술과 전략을 연결하여<br />
+        실현 가능한 블록체인 비즈니스 로드맵을 제시합니다.
+      </p>
+      <a href="#contact">
+        <button data-i18n="header_contact_btn">프로젝트 문의하기</button>
+      </a>
+    </header>
+
+    <section class="section" id="services">
+      <h2 data-i18n="services_title">주요 사업 및 서비스</h2>
+      <div class="grid">
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <!-- 앞면 -->
+            <div class="flip-card-front">
+              <img src="src/desktop.svg" alt="Platform Icon" />
+              <h3 data-i18n="services_platform_title">
+                플랫폼 및 소프트웨어 개발
+              </h3>
+              <p data-i18n="services_platform_desc">
+                블록체인 기반 플랫폼 기획, 개발, 운영
+              </p>
+            </div>
+
+            <!-- 뒷면 -->
+            <div class="flip-card-back">
+              <h3 data-i18n="services_platform_back_title">
+                플랫폼 및 소프트웨어 개발 / 운영 (블록체인 관련)
+              </h3>
+              <h4 data-i18n="services_scope">서비스 범위</h4>
+              <ul>
+                <li data-i18n="services_platform_scope1">
+                  요구사항 분석 및 전략 컨설팅
+                </li>
+                <li data-i18n="services_platform_scope2">
+                  웹/모바일/클라우드 기반 플랫폼 및 소프트웨어 개발
+                </li>
+                <li data-i18n="services_platform_scope3">
+                  운영 안정성 확보 및 기능 고도화를 위한 유지보수
+                </li>
+              </ul>
+              <h4 data-i18n="services_reference">프로젝트 레퍼런스</h4>
+              <ul>
+                <li data-i18n="services_platform_ref1">
+                  STO / NFT 관련 SI 개발 및 자체 구축 솔루션 제공
+                </li>
+                <li data-i18n="services_platform_ref2">
+                  B2B 대상 온/오프체인 데이터 기반 금융 인덱스 제공
+                </li>
+                <li data-i18n="services_platform_ref3">
+                  NFT 마켓플레이스 플랫폼 제작
+                </li>
+                <li data-i18n="services_platform_ref4">
+                  AI 스타트업 프론트엔드 개발
+                </li>
+              </ul>
+              <h4 data-i18n="services_features">특징</h4>
+              <ul>
+                <li data-i18n="services_platform_feat1">
+                  맞춤형 설계 및 개발 프로세스
+                </li>
+                <li data-i18n="services_platform_feat2">
+                  최신 기술 트렌드 반영 (Web3, AI 등)
+                </li>
+                <li data-i18n="services_platform_feat3">
+                  유연한 PM 및 납기 관리 체계
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <!-- 앞면 -->
+            <div class="flip-card-front">
+              <img src="src/chalkboard-teacher.svg" alt="Consulting Icon" />
+              <h3 data-i18n="services_consulting_title">
+                블록체인 컨설팅 및 교육
+              </h3>
+              <p data-i18n="services_consulting_desc">
+                도입 전략부터 마케팅, 교육까지 종합 지원
+              </p>
+            </div>
+
+            <!-- 뒷면 -->
+            <div class="flip-card-back">
+              <h3 data-i18n="services_consulting_back_title">
+                블록체인 기술/사업 컨설팅 및 교육 프로그램
+              </h3>
+
+              <h4 data-i18n="services_scope">서비스 범위</h4>
+              <ul>
+                <li data-i18n="services_consulting_scope1">도입 전략 수립</li>
+                <li data-i18n="services_consulting_scope2">
+                  블록체인 기반 서비스 기획 및 UX 설계
+                </li>
+                <li data-i18n="services_consulting_scope3">
+                  개발 방향성 제안 및 검토
+                </li>
+                <li data-i18n="services_consulting_scope4">
+                  영업 전략 수립 (타겟팅, 파트너십, 세일즈 구조 설계)
+                </li>
+                <li data-i18n="services_consulting_scope5">
+                  마케팅 실행 (브랜드 포지셔닝, 콘텐츠 전략, 캠페인 운영)
+                </li>
+                <li data-i18n="services_consulting_scope6">
+                  기관, 법인 대상 블록체인 / 암호화폐 시장 교육 프로그램 제공
+                </li>
+              </ul>
+
+              <h4 data-i18n="services_reference">프로젝트 레퍼런스</h4>
+              <ul>
+                <li data-i18n="services_consulting_ref1">
+                  블록체인 스타트업 사내 프로젝트 지원<br />
+                  – 기획, 전략, 마케팅 등 전 과정 종합 컨설팅
+                </li>
+              </ul>
+
+              <h4 data-i18n="services_features">특징</h4>
+              <ul>
+                <li data-i18n="services_consulting_feat1">
+                  산업별 실무 중심 컨설팅 역량
+                </li>
+                <li data-i18n="services_consulting_feat2">
+                  시장 연계성 높은 GTM(Go-To-Market) 전략 제공
+                </li>
+                <li data-i18n="services_consulting_feat3">
+                  기술-비즈니스-고객 경험을 연결하는 융합적 접근
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="history">
+      <h2 data-i18n="history_title">Company History</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-date" data-i18n="history_2019"></span>
+          <p class="timeline-desc" data-i18n="history_2019_1"></p>
+          <p class="timeline-desc" data-i18n="history_2019_2"></p>
+          <p class="timeline-desc" data-i18n="history_2019_3"></p>
+          <p class="timeline-desc" data-i18n="history_2019_4"></p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date" data-i18n="history_2021"></span>
+          <p class="timeline-desc" data-i18n="history_2021_1"></p>
+          <p class="timeline-desc" data-i18n="history_2021_2"></p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date" data-i18n="history_2022"></span>
+          <p class="timeline-desc" data-i18n="history_2022_1"></p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-date" data-i18n="history_2023"></span>
+          <p class="timeline-desc" data-i18n="history_2023_1"></p>
+        </div>
+        <div class="timeline-item highlight">
+          <span class="timeline-date" data-i18n="history_2024"></span>
+          <p class="timeline-desc" data-i18n="history_2024_1"></p>
+          <p class="timeline-desc" data-i18n="history_2024_2"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="team">
+      <h2 data-i18n="team_title">팀 소개</h2>
+      <div class="team">
+        <!-- 이현명 -->
+        <div class="team-flip-card">
+          <input type="checkbox" id="flip-hyunmyung" hidden />
+          <label for="flip-hyunmyung" class="team-card-inner">
+            <div class="team-card-front">
+              <img src="src/homepage-CEO.jpg" alt="이현명" />
+            </div>
+            <div
+              class="team-card-back"
+              style="background-image: url('src/homepage-CEO.jpg')"
+            >
+              <div class="card-back-content">
+                <p>
+                  <strong data-i18n="team_ceo_name">이현명</strong><br /><span
+                    data-i18n="team_ceo_title"
+                    >CEO / 공동창업자</span
+                  >
+                </p>
+                <p data-i18n="team_ceo_desc1">
+                  KAIST 전산학부 학사<br />
+                  前 CGEX 최고전략책임자(CSO)<br />
+                  前 코인원 전략/사업개발 팀장, 기획/PM 팀장<br />
+                  前 미래에셋증권 MTS 및 파생상품 기획 PM
+                </p>
+                <p data-i18n="team_ceo_desc2">
+                  “디에이그라운드의 대표이자 프론트엔드 개발자입니다. 전통
+                  금융과 디지털 자산 산업의 교차점에서 폭넓은 경험을 바탕으로
+                  회사를 이끌고 있습니다.”
+                </p>
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <!-- 백훈종 -->
+        <div class="team-flip-card">
+          <input type="checkbox" id="flip-hoon" hidden />
+          <label for="flip-hoon" class="team-card-inner">
+            <div class="team-card-front">
+              <img src="src/homepage-COO.jpg" alt="백훈종" />
+            </div>
+            <div
+              class="team-card-back"
+              style="background-image: url('src/homepage-COO.jpg')"
+            >
+              <div class="card-back-content">
+                <p>
+                  <strong data-i18n="team_coo_name">백훈종</strong><br /><span
+                    data-i18n="team_coo_title"
+                    >COO / 공동창업자</span
+                  >
+                </p>
+                <p data-i18n="team_coo_desc1">
+                  George Washington Univ, Business Admin<br />
+                  前 코인원 법인영업 및 사업개발 매니저<br />
+                  前 세아상역 해외영업
+                </p>
+                <p data-i18n="team_coo_desc2">
+                  “디에이그라운드의 COO로서 국내외 사업개발, 마케팅, 영업 전략을
+                  총괄하고 있습니다.”
+                </p>
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <!-- 박수진 -->
+        <div class="team-flip-card">
+          <input type="checkbox" id="flip-sujin" hidden />
+          <label for="flip-sujin" class="team-card-inner">
+            <div class="team-card-front">
+              <img src="src/homepage-CTO.jpg" alt="박수진" />
+            </div>
+            <div
+              class="team-card-back"
+              style="background-image: url('src/homepage-CTO.jpg')"
+            >
+              <div class="card-back-content">
+                <p>
+                  <strong data-i18n="team_cto_name">박수진</strong><br /><span
+                    data-i18n="team_cto_title"
+                    >CTO / 공동창업자</span
+                  >
+                </p>
+                <p data-i18n="team_cto_desc1">
+                  국민대학교 컴퓨터공학부 학사<br />
+                  前 디렉셔널 CTO<br />
+                  前 미래에셋증권 IT부문 및 트레이딩 시스템 개발
+                </p>
+                <p data-i18n="team_cto_desc2">
+                  “디에이그라운드의 CTO이자 풀스택 엔지니어입니다. 전통 금융
+                  시스템과 핀테크 플랫폼의 기술개발을 두루 경험했습니다.”
+                </p>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="investors">
+      <h2 data-i18n="investors_title">투자사</h2>
+      <div
+        class="partners"
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          flex-wrap: wrap;
+        "
+      >
+        <a
+          href="https://www.primer.kr/"
+          target="_blank"
+          style="display: inline-block; transition: transform 0.3s ease"
+        >
+          <img
+            src="src/partner_primer_color.png"
+            alt="Primer"
+            style="height: 80px; opacity: 1"
+          />
+        </a>
+        <a
+          href="https://www.strongvc.com/"
+          target="_blank"
+          style="display: inline-block; transition: transform 0.3s ease"
+        >
+          <img
+            src="src/partner_strong_color.png"
+            alt="Strong Ventures"
+            style="height: 80px; opacity: 1"
+          />
+        </a>
+        <a
+          href="https://www.kica.or.kr/"
+          target="_blank"
+          style="display: inline-block; transition: transform 0.3s ease"
+        >
+          <img
+            src="src/partner_kica_color.png"
+            alt="KICA"
+            style="height: 80px; opacity: 1"
+          />
+        </a>
+      </div>
+    </section>
+    <section id="contact" class="section" style="text-align: center">
+      <h2 data-i18n="contact_title">Contact Us</h2>
+      <p
+        style="font-size: 1.1em; margin-bottom: 24px"
+        data-i18n="contact_subtitle"
+      >
+        아래 양식을 작성하거나
+        <a href="mailto:hm@daground.io" style="color: #00e5ff">hm@daground.io</a
+        >로 직접 이메일 주세요.
+      </p>
+      <form
+        action="https://formspree.io/f/xeognewj"
+        method="POST"
+        style="
+          max-width: 600px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        "
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="이름"
+          data-i18n-placeholder="contact_name_placeholder"
+          required
+          style="padding: 12px; border-radius: 6px; border: none"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="이메일 주소"
+          data-i18n-placeholder="contact_email_placeholder"
+          required
+          style="padding: 12px; border-radius: 6px; border: none"
+        />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="문의 내용을 입력해주세요."
+          data-i18n-placeholder="contact_message_placeholder"
+          required
+          style="padding: 12px; border-radius: 6px; border: none"
+        ></textarea>
+        <button
+          type="submit"
+          style="
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #00e5ff;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+          "
+          data-i18n="contact_send_btn"
+        >
+          보내기
+        </button>
+      </form>
+    </section>
+
+    <footer id="footer">
+      <div
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 40px;
+          padding: 20px 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+          color: #ccc;
+          font-size: 14px;
+        "
+      >
+        <div>
+          <p
+            style="font-weight: bold; margin-bottom: 10px; color: white"
+            data-i18n="footer_company"
+          >
+            (주)디에이그라운드
+          </p>
+        </div>
+        <div style="text-align: right">
+          <p data-i18n="footer_ceo">
+            대표 이현명 | 사업자등록번호 190-88-01294
+          </p>
+          <p data-i18n="footer_copyright">
+            © Copyright 2025 DAGROUND Inc. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // 번역 데이터
+      const translations = {
+        ko: {
+          nav_home: "홈",
+          nav_services: "사업 영역",
+          nav_team: "팀 소개",
+          nav_investors: "투자사",
+          header_title:
+            "Web3 기반 디지털 전환,<br />수많은 기회의 출발점을 함께합니다.",
+          header_subtitle:
+            "디에이그라운드는 기술과 전략을 연결하여<br />실현 가능한 블록체인 비즈니스 로드맵을 제시합니다.",
+          header_contact_btn: "프로젝트 문의하기",
+          services_title: "주요 사업 및 서비스",
+          services_platform_title: "플랫폼 및 소프트웨어 개발",
+          services_platform_desc: "블록체인 기반 플랫폼 기획, 개발, 운영",
+          services_platform_back_title:
+            "플랫폼 및 소프트웨어 개발 / 운영 (블록체인 관련)",
+          services_scope: "서비스 범위",
+          services_platform_scope1: "요구사항 분석 및 전략 컨설팅",
+          services_platform_scope2:
+            "웹/모바일/클라우드 기반 플랫폼 및 소프트웨어 개발",
+          services_platform_scope3:
+            "운영 안정성 확보 및 기능 고도화를 위한 유지보수",
+          services_reference: "프로젝트 레퍼런스",
+          services_platform_ref1:
+            "STO / NFT 관련 SI 개발 및 자체 구축 솔루션 제공",
+          services_platform_ref2:
+            "B2B 대상 온/오프체인 데이터 기반 금융 인덱스 제공",
+          services_platform_ref3: "NFT 마켓플레이스 플랫폼 제작",
+          services_platform_ref4: "AI 스타트업 프론트엔드 개발",
+          services_features: "특징",
+          services_platform_feat1: "맞춤형 설계 및 개발 프로세스",
+          services_platform_feat2: "최신 기술 트렌드 반영 (Web3, AI 등)",
+          services_platform_feat3: "유연한 PM 및 납기 관리 체계",
+          services_consulting_title: "블록체인 컨설팅 및 교육",
+          services_consulting_desc: "도입 전략부터 마케팅, 교육까지 종합 지원",
+          services_consulting_back_title:
+            "블록체인 기술/사업 컨설팅 및 교육 프로그램",
+          services_consulting_scope1: "도입 전략 수립",
+          services_consulting_scope2: "블록체인 기반 서비스 기획 및 UX 설계",
+          services_consulting_scope3: "개발 방향성 제안 및 검토",
+          services_consulting_scope4:
+            "영업 전략 수립 (타겟팅, 파트너십, 세일즈 구조 설계)",
+          services_consulting_scope5:
+            "마케팅 실행 (브랜드 포지셔닝, 콘텐츠 전략, 캠페인 운영)",
+          services_consulting_scope6:
+            "기관, 법인 대상 블록체인 / 암호화폐 시장 교육 프로그램 제공",
+          services_consulting_ref1:
+            "블록체인 스타트업 사내 프로젝트 지원<br />– 기획, 전략, 마케팅 등 전 과정 종합 컨설팅",
+          services_consulting_feat1: "산업별 실무 중심 컨설팅 역량",
+          services_consulting_feat2:
+            "시장 연계성 높은 GTM(Go-To-Market) 전략 제공",
+          services_consulting_feat3:
+            "기술-비즈니스-고객 경험을 연결하는 융합적 접근",
+          team_title: "팀 소개",
+          team_ceo_name: "이현명",
+          team_ceo_title: "CEO / 공동창업자",
+          team_ceo_desc1:
+            "KAIST 전산학부 학사<br />前 CGEX 최고전략책임자(CSO)<br />前 코인원 전략/사업개발 팀장, 기획/PM 팀장<br />前 미래에셋증권 MTS 및 파생상품 기획 PM",
+          team_ceo_desc2:
+            "“디에이그라운드의 대표이자 프론트엔드 개발자입니다. 전통 금융과 디지털 자산 산업의 교차점에서 폭넓은 경험을 바탕으로 회사를 이끌고 있습니다.”",
+          team_coo_name: "백훈종",
+          team_coo_title: "COO / 공동창업자",
+          team_coo_desc1:
+            "George Washington Univ, Business Admin<br />前 코인원 법인영업 및 사업개발 매니저<br />前 세아상역 해외영업",
+          team_coo_desc2:
+            "“디에이그라운드의 COO로서 국내외 사업개발, 마케팅, 영업 전략을 총괄하고 있습니다.”",
+          team_cto_name: "박수진",
+          team_cto_title: "CTO / 공동창업자",
+          team_cto_desc1:
+            "국민대학교 컴퓨터공학부 학사<br />前 디렉셔널 CTO<br />前 미래에셋증권 IT부문 및 트레이딩 시스템 개발",
+          team_cto_desc2:
+            "“디에이그라운드의 CTO이자 풀스택 엔지니어입니다. 전통 금융 시스템과 핀테크 플랫폼의 기술개발을 두루 경험했습니다.”",
+          investors_title: "투자사",
+          contact_title: "Contact Us",
+          contact_subtitle:
+            '아래 양식을 작성하거나 <a href="mailto:hm@daground.io" style="color: #00e5ff">hm@daground.io</a>로 직접 이메일 주세요.',
+          contact_name_placeholder: "이름",
+          contact_email_placeholder: "이메일 주소",
+          contact_message_placeholder: "문의 내용을 입력해주세요.",
+          contact_send_btn: "보내기",
+          footer_company: "(주)디에이그라운드",
+          footer_ceo: "대표 이현명 | 사업자등록번호 190-88-01294",
+          footer_copyright:
+            "© Copyright 2025 DAGROUND Inc. All Rights Reserved.",
+          // --- 타임라인 다국어 (한국어) ---
+          history_title: "회사 연혁",
+          history_2019: "2019-2020",
+          history_2019_1: "법인 설립",
+          history_2019_2: "샌드뱅크 서비스 출시",
+          history_2019_3: "프라이머 시드 투자 / 스트롱벤처스 프리A 투자 유치",
+          history_2019_4: "서울핀테크랩 지원기업 선정",
+          history_2021: "2021",
+          history_2021_1: "샌드뱅크 모바일 앱 런칭 (iOS / Android)",
+          history_2021_2: "ISO/IEC 27001 인증 획득",
+          history_2022: "2022",
+          history_2022_1: "KICA 및 스트롱벤처스 시리즈 A 투자 유치",
+          history_2023: "2023",
+          history_2023_1: "샌드뱅크 자산관리 시스템(SAMS) 출시",
+          history_2024: "2024",
+          history_2024_1: "SmashFi 서비스 출시",
+          history_2024_2:
+            "SFF 글로벌 핀테크 핵셀러레이터 TOP 20 파이널리스트 진출"
+        },
+        en: {
+          nav_home: "Home",
+          nav_services: "Services",
+          nav_team: "Team",
+          nav_investors: "Investors",
+          header_title:
+            "Web3-based digital transformation,<br />We are your starting point for countless opportunities.",
+          header_subtitle:
+            "DA Ground connects technology and strategy<br />to deliver actionable blockchain business roadmaps.",
+          header_contact_btn: "Contact Us",
+          services_title: "Main Businesses & Services",
+          services_platform_title: "Platform & Software Development",
+          services_platform_desc:
+            "Planning, development, and operation of blockchain-based platforms",
+          services_platform_back_title:
+            "Platform & Software Development / Operation (Blockchain)",
+          services_scope: "Scope of Service",
+          services_platform_scope1:
+            "Requirements analysis & strategic consulting",
+          services_platform_scope2:
+            "Web/Mobile/Cloud platform and software development",
+          services_platform_scope3:
+            "Maintenance for operational stability & feature enhancements",
+          services_reference: "Project References",
+          services_platform_ref1:
+            "SI development for STO/NFT and provision of in-house solutions",
+          services_platform_ref2:
+            "On/Off-chain data-based financial index for B2B clients",
+          services_platform_ref3: "NFT marketplace platform production",
+          services_platform_ref4: "Frontend development for AI startup",
+          services_features: "Features",
+          services_platform_feat1: "Customized design & development process",
+          services_platform_feat2:
+            "Latest technology trends applied (Web3, AI, etc.)",
+          services_platform_feat3: "Flexible PM and delivery management system",
+          services_consulting_title: "Blockchain Consulting & Education",
+          services_consulting_desc:
+            "Comprehensive support from adoption strategy to marketing & education",
+          services_consulting_back_title:
+            "Blockchain Technology/Business Consulting & Education Program",
+          services_consulting_scope1: "Establishing adoption strategies",
+          services_consulting_scope2:
+            "Planning blockchain-based services & UX design",
+          services_consulting_scope3: "Development direction proposal & review",
+          services_consulting_scope4:
+            "Sales strategy (targeting, partnerships, sales structure)",
+          services_consulting_scope5:
+            "Marketing execution (brand positioning, content strategy, campaign operation)",
+          services_consulting_scope6:
+            "Blockchain/cryptocurrency market education for organizations & corporations",
+          services_consulting_ref1:
+            "In-house project support for blockchain startups<br />– Comprehensive consulting for all steps: planning, strategy, marketing",
+          services_consulting_feat1: "Industry-specific, hands-on consulting",
+          services_consulting_feat2:
+            "Go-To-Market strategies with strong market linkage",
+          services_consulting_feat3:
+            "Convergent approach connecting tech, business, and customer experience",
+          team_title: "Our Team",
+          team_ceo_name: "Hyunmyung Lee",
+          team_ceo_title: "CEO / Co-founder",
+          team_ceo_desc1:
+            "B.S. in Computer Science, KAIST<br />Former CSO, CGEX<br />Former Head of Strategy/Business Development & PM, Coinone<br />Former PM for MTS & Derivatives, Mirae Asset Securities",
+          team_ceo_desc2:
+            "As CEO and frontend engineer of DA Ground, I lead the company with extensive experience at the intersection of traditional finance and digital assets.",
+          team_coo_name: "Hoonjong Baek",
+          team_coo_title: "COO / Co-founder",
+          team_coo_desc1:
+            "George Washington Univ, Business Admin<br />Former Corporate Sales & BizDev Manager, Coinone<br />Former Overseas Sales, Sae-A Trading",
+          team_coo_desc2:
+            "As COO, I oversee global business development, marketing, and sales, ensuring strategic growth for DA Ground.",
+          team_cto_name: "Sujin Park",
+          team_cto_title: "CTO / Co-founder",
+          team_cto_desc1:
+            "B.S. in Computer Engineering, Kookmin Univ<br />Former CTO, Directional<br />Former IT & Trading System Developer, Mirae Asset Securities",
+          team_cto_desc2:
+            "As CTO and full-stack engineer, I bridge traditional financial systems and cutting-edge fintech platforms through hands-on technical leadership.",
+          investors_title: "Investors",
+          contact_title: "Contact Us",
+          contact_subtitle:
+            'Fill out the form below or email us directly at <a href="mailto:hm@daground.io" style="color: #00e5ff">hm@daground.io</a>.',
+          contact_name_placeholder: "Name",
+          contact_email_placeholder: "Email Address",
+          contact_message_placeholder: "Please enter your inquiry.",
+          contact_send_btn: "Send",
+          footer_company: "DA Ground Inc.",
+          footer_ceo:
+            "CEO Hyunmyung Lee | Business Registration No. 190-88-01294",
+          footer_copyright:
+            "© Copyright 2025 DAGROUND Inc. All Rights Reserved.",
+          // --- Timeline i18n (English) ---
+          history_title: "Company History",
+          history_2019: "2019-2020",
+          history_2019_1: "Establishment of DA Ground Co., Ltd",
+          history_2019_2: "Launch of Sandbank Service",
+          history_2019_3:
+            "Seed Investment from Primer / Pre-A Investment from Strong Ventures",
+          history_2019_4:
+            "Selection as a Supported Company by Seoul Fintech Lab",
+          history_2021: "2021",
+          history_2021_1: "Launch of Sandbank Mobile App (iOS / Android)",
+          history_2021_2:
+            "ISO/IEC 27001 Certification for Blockchain-based Digital Asset Investment Services",
+          history_2022: "2022",
+          history_2022_1: "Series A Investment from KICA and Strong Ventures",
+          history_2023: "2023",
+          history_2023_1: "Launch of Sandbank Asset Management System (SAMS)",
+          history_2024: "2024",
+          history_2024_1: "Launch of SmashFi Service",
+          history_2024_2: "SFF Global Fintech Hackcelerator Finalist"
+        }
+      };
+
+      // 언어 변경 함수
+      function setLanguage(lang) {
+        const dict = translations[lang] || translations.en;
+        // 텍스트 노드 교체
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          let key = el.getAttribute("data-i18n");
+          if (dict[key]) {
+            el.innerHTML = dict[key];
+          }
+        });
+        // placeholder 교체
+        document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+          let key = el.getAttribute("data-i18n-placeholder");
+          if (dict[key]) {
+            el.setAttribute("placeholder", dict[key]);
+          }
+        });
+      }
+
+      // DOMContentLoaded 시 언어 및 버튼 설정
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("lang-toggle-btn");
+        const defaultLang = "en";
+        document.documentElement.lang = defaultLang;
+        setLanguage(defaultLang);
+        if (btn) {
+          btn.textContent = defaultLang === "ko" ? "EN" : "KO";
+        }
+      });
+
+      // 언어 토글 버튼 동기화
+      function toggleLanguage() {
+        const current = document.documentElement.lang || "en";
+        const next = current === "ko" ? "en" : "ko";
+        setLanguage(next);
+        document.documentElement.lang = next;
+        const btn = document.getElementById("lang-toggle-btn");
+        btn.textContent = next === "ko" ? "EN" : "KO";
+      }
+    </script>
+  </body>
+</html>

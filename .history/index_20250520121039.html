@@ -465,10 +465,10 @@
         </div>
         <div style="text-align: right">
           <p data-i18n="footer_ceo">
-            대표 이현명<br />사업자등록번호 190-88-01294
+            대표 이현명 | 사업자등록번호 190-88-01294
           </p>
           <p data-i18n="footer_copyright">
-            © Copyright 2025 DAGROUND Inc.<br />All Rights Reserved.
+            © Copyright 2025 DAGROUND Inc. All Rights Reserved.
           </p>
         </div>
       </div>
@@ -557,9 +557,9 @@
           contact_message_placeholder: "문의 내용을 입력해주세요.",
           contact_send_btn: "보내기",
           footer_company: "(주)디에이그라운드",
-          footer_ceo: "대표 이현명<br />사업자등록번호 190-88-01294",
+          footer_ceo: "대표 이현명 | 사업자등록번호 190-88-01294",
           footer_copyright:
-            "© Copyright 2025 DAGROUND Inc.<br />All Rights Reserved.",
+            "© Copyright 2025 DAGROUND Inc. All Rights Reserved.",
           // --- 타임라인 다국어 (한국어) ---
           history_title: "회사 연혁",
           history_2019: "2019-2020",
@@ -665,9 +665,9 @@
           contact_send_btn: "Send",
           footer_company: "DA Ground Inc.",
           footer_ceo:
-            "CEO Hyunmyung Lee<br />Business Registration No. 190-88-01294",
+            "CEO Hyunmyung Lee | Business Registration No. 190-88-01294",
           footer_copyright:
-            "© Copyright 2025 DAGROUND Inc.<br />All Rights Reserved.",
+            "© Copyright 2025 DAGROUND Inc. All Rights Reserved.",
           // --- Timeline i18n (English) ---
           history_title: "Company History",
           history_2019: "2019-2020",
@@ -729,29 +729,18 @@
           });
         }
 
-        // 메뉴 외부 클릭 시 닫기 (메뉴가 열려 있을 때만 감지, 이벤트 버블 차단)
-        document.addEventListener(
-          "click",
-          (e) => {
-            const navLinks = document.querySelector("nav ul");
-            const toggle = document.querySelector(".nav-toggle");
-            if (!navLinks || !toggle) return;
+        // 메뉴 외부 클릭 시 닫기
+        document.addEventListener("click", (e) => {
+          const navLinks = document.querySelector("nav ul");
+          const toggle = document.querySelector(".nav-toggle");
+          if (!navLinks || !toggle) return;
+          const isToggleClicked = toggle.contains(e.target);
+          const isMenuClicked = navLinks.contains(e.target);
 
-            const isMenuOpen = navLinks.classList.contains("show");
-            const isToggleClicked = toggle.contains(e.target);
-            const isMenuClicked = navLinks.contains(e.target);
-
-            if (isMenuOpen && !isToggleClicked && !isMenuClicked) {
-              navLinks.classList.remove("show");
-              // 외부 클릭 시 메뉴 닫고, 추가 클릭 이벤트 전파 방지
-              e.stopPropagation();
-              e.preventDefault();
-              e.stopImmediatePropagation();
-              return false;
-            }
-          },
-          true
-        ); // 캡처 단계에서 이벤트 처리
+          if (!isToggleClicked && !isMenuClicked) {
+            navLinks.classList.remove("show");
+          }
+        });
       });
 
       // 언어 토글 버튼 동기화
